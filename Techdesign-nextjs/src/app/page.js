@@ -1,7 +1,20 @@
 import MenuBar from "./components/MenuBar";
+import Dogcard from "./components/dogcard";
+import Catcard from "./components/catcard";
+
+// export default async function HomePage() { 
+//   const response = await fetch("https://dogapi.dog/api/v2/breeds")
+//   const resJSON = await response.json()
+//   const dogs = resJSON.data
+
+//   console.log(dogs)
+  
+  const response = await fetch("https://http.cat/")
+  const resJson = await response.json()
+  const characters = resJson.data
 
 
-export default function HomePage() { 
+
   return (
 
       <div className ="Wrapper p-[16px]  ">
@@ -10,13 +23,13 @@ export default function HomePage() {
           <img className=" w-[50px]" src="/Hamberger.jpg"/>
         </header>
 
-        <main className=" flex flex-col gap-[8px]">
-         <input type="text" placeholder="seacrh" className="px-[15px] border-black-100 border-1 rounded-[100px] w-[100%] " />
-        <img className= "BD rounded -[50px] w-[100%] p-[10px] " src="/img1.png" />
-        <img className= "BD rounded -[50px] w-[100%] p-[10px]" src="/img2.png" />
-
+        <main>
+            {cat.map(cat => (
+              <Catcard name={cat.name} description={cat.description}
+                key={cat.id} />
+            ))}
+    
         </main>
 
       </div>  
   );
-}
