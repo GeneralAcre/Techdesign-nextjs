@@ -1,17 +1,17 @@
 import MenuBar from "./components/MenuBar";
 import Dogcard from "./components/dogcard";
-import Catcard from "./components/catcard";
+import Charactercard from "./components/charactercard";
 
-// export default async function HomePage() { 
+export default async function HomePage() { 
 //   const response = await fetch("https://dogapi.dog/api/v2/breeds")
 //   const resJSON = await response.json()
 //   const dogs = resJSON.data
 
 //   console.log(dogs)
   
-  const response = await fetch("https://http.cat/")
+  const response = await fetch("https://amiiboapi.com/")
   const resJson = await response.json()
-  const characters = resJson.data
+  const Character = resJson.data
 
 
 
@@ -24,12 +24,14 @@ import Catcard from "./components/catcard";
         </header>
 
         <main>
-            {cat.map(cat => (
-              <Catcard name={cat.name} description={cat.description}
-                key={cat.id} />
+            {Character.map(Character => (
+              <Charactercard name={Character.name} description={Character.description}
+                key={Character.id} />
             ))}
     
         </main>
 
       </div>  
   );
+
+}

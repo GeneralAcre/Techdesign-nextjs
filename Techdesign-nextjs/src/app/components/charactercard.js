@@ -1,4 +1,4 @@
-export default function Catcard({name = 'No name',
+export default function Charactercard({name = 'No name',
     description='No description'}){
     return(
         <div className ="shadow-md rounded-[8px] p-[16px] flex flex-col gap-[8px]">
