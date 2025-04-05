@@ -9,9 +9,9 @@ export default async function HomePage() {
 
 //   console.log(dogs)
   
-  const response = await fetch("https://amiiboapi.com/")
-  const resJson = await response.json()
-  const Character = resJson.data
+  const response = await fetch("https://amiiboapi.com/api/amiibo/");
+  const resJson = await response.json();
+  const character = resJson.amiibo; // The API returns an `amiibo` array
 
 
 
