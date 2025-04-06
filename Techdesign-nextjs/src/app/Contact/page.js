@@ -1,25 +1,14 @@
-// import MenuBar from "../components/MenuBar";
 
-// export default function Contact(){
-//     return (
-//         <><MenuBar />
-//           <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-//             <h1 className="text-4xl font-bold text-purple-600">Contact Page</h1>
-//             <p className="mt-4 text-lg text-gray-700">ติดต่อเราที่นี่</p>
-//           </main>
-//         </>
-//       );
-//     }
-
-import ContactCard from "../components/ContactCard";
-
-export default function Contact(){
-  return(
-    <div className="wrapper p-[16px] ">Contact
-      <ContactCard name="John Doe" description= "A stupid one" />
-      <ContactCard name="Jane" description= "A  one" />
-      <ContactCard />
-      <ContactCard />
+export default function Contact() {
+  return (
+    <div className="wrapper p-[16px] flex flex-col gap-[6px]">
+      <h1 className="text-[24px] font-bold">
+        Contact
+      </h1>
+      <ContactCard name="John Doe" description="A good person" imageUrl="https://avatar.iran.liara.run/public?test=1" />
+      <ContactCard name="Jane Jan" description="A bad person" imageUrl="https://avatar.iran.liara.run/public?test=2" />
+      <ContactCard name="Pete Peterson" imageUrl="https://avatar.iran.liara.run/public?test=3" />
+      <ContactCard name="Justin Timberlake" imageUrl="https://avatar.iran.liara.run/public?test=4" />
     </div>
   )
 }
